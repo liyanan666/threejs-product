@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./element-ui/index.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="./element-ui/index.js"></script>
+		<script src="./js/three.js"></script>
+		<script src="./js/OrbitControls.js"></script>
+		<script src="./js/GLTFLoader.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div id="content" class="canvas" style="height: 500px"></div>
+			<div class="selct">
+				<div class="title">部分选择</div>
+				<ul class="list">
+					<li v-for="(item, index) in meshList" @click="selectMesh(index)" :class="activeIndex == index ? 'active' : ''">{{item.name}}</li>
+				</ul>
+				<div class="title">颜色选择</div>
+				<el-color-picker v-model="color" color-format="rgb" @change="setSelectColor"></el-color-picker>
+			</div>
+		</div>
+		<script src="./js/index.js"></script>
+	</body>
+</html>

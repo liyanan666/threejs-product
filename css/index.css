@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.title {
+	margin-bottom: 20px;
+}
+.selct {
+	padding: 20px;
+}
+.title {
+	margin: 20px 0;
+}
+.list {
+	display: flex;
+}
+.list li {
+	list-style: none;
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+	border: 1px solid #999;
+	text-align: center;
+	line-height: 80px;
+}
+.active {
+	border: 1px solid blue;
+	color: blue;
+}
